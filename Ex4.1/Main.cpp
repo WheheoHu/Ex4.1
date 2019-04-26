@@ -28,12 +28,14 @@ int CoordinateXY::get_CoorY()
 	return CoorY;
 }
 
+
+
 void displayFunc();
 int main() {
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-	glutInitWindowPosition(50, 50);
+	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(600, 300);
-	glutCreateWindow("Split-Screen Example");
+	glutCreateWindow("Split-Screen");
 
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
@@ -57,6 +59,7 @@ void displayFunc()
 	glVertex2f(0, -150);
 	glEnd();
 
-	glLoadIdentity();
 
+	glLoadIdentity();
+	glFlush();
 }
